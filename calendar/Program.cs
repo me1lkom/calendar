@@ -4,19 +4,19 @@ class Program
 {
     static void Main()
     {
-        Console.Write("С какого дня начинается май? (1-пн, 2-вт, 3-ср, 4-чт, 5-пт, 6-сб, 7-вс):");
+        Console.Write("С какого дня недели начинается май?" + "\n");
+        Console.Write("Пн-1 Вт-2 Ср-3 Чт-4 Пт-5 Сб-6 Вс-7: " + "\n");
         if (int.TryParse(Console.ReadLine(), out int startDay) && startDay >= 1 && startDay <= 7)
         {
-            Dev(startDay);
+            Day(startDay);
         }
         else
         {
             Console.WriteLine("Ошибка: введите число от 1 до 7!");
-            Main();
         }
     }
 
-    static void Dev(int startDay)
+    static void Day(int startDay)
     {
         Console.Write("Введите число мая: ");
         if (int.TryParse(Console.ReadLine(), out int day) && day >= 1 && day <= 31)
@@ -50,7 +50,6 @@ class Program
         else
         {
             Console.WriteLine("Ошибка: введите число от 1 до 31!");
-            Dev(startDay);
         }
 
         Console.WriteLine("Нажмите Enter для выхода...");
